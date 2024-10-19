@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background: #748D92;
+}
+
+.card{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    margin: 100px auto 0;
+    width:90%;
+    max-width: 400px;
+    color: rgb(78, 73, 73);
+}
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.input-container{
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+
+.input-container input{
+    padding: 10px 80px 10px 10px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 25px;
+    color: #2E3944;
+    background-color: #cfd0d1;
+    box-sizing: border-box;
+}
+
+.input-container .btn{
+    background-color: #2E3944;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius:25px;
+    cursor: pointer;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    
+}
+
+.input-container input:focus{
+    border: none;
+ border-color: #748D92;
+ outline: none;
+}
+
+.list-container {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+ul li {
+    list-style-type: none; /* Remove default disc bullets */
+    position: relative;
+    user-select: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 7px 10px 50px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+background-image: url("./images/unchecked.png");
+background-size: cover;
+background-position: center;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    
+}
+
+ul li.checked::before{
+    background-image: url("./images/checked.png");
+   
+}
+
+
+
+ul li span{
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    background: #edeef0;
+    color: #2E3944;
+}
+
+ul li .update-btn {
+    right: 35px;  /* Position the pencil icon next to the delete button */
+}
+
+ul li .delete-btn {
+    right: 0;  /* Align delete button to the far right */
+}
+
+ul li span:hover{
+    background: rgb(111, 105, 105);
+    color: white;
+    
+}
+
